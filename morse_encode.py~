@@ -8,6 +8,7 @@ letter_to_morse = {'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..
 
 message = input("Please enter a message:\n")
 
+
 def encode(message):
     morse = []
 
@@ -17,10 +18,9 @@ def encode(message):
 
     # We need to join together Morse code letters with spaces
     morse_message = " ".join(morse)
+    
     return morse_message
 
-try:
-    encoded_message = encode(message)
-    print(f"Incoming message: {message}\nMorse encoded: {encoded_message}")
-except KeyError:
-    print("Error: Could not encode message")
+
+encoded_message = encode(message)
+print(f"Message: {message}\nMorse encoded: {encoded_message}")
