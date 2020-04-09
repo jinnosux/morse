@@ -15,6 +15,7 @@ for letter in letter_to_morse:
 
 message = input("Please enter a message in morse:\n")
 
+
 def decode(message):
     english = []
 
@@ -29,7 +30,4 @@ def decode(message):
     english_message = "".join(english)
     return english_message
 
-try:
-    print(decode(message))
-except KeyError:
-    print("Error: Message is not Morse code")
+print(decode(message))
